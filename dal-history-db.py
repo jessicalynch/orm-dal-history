@@ -21,12 +21,12 @@ class Airline(Base):
     __tablename__ = 'airlines'
     __table_args__ = {'schema':f'{db_name}'}
 
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=False)
+    id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(length=50), nullable=False)
     iata_code = Column(String(length=2))
 
     def __repr__(self):
-        return f'<Airline(name"{self.name}", IATA carrier code="{self.iata_code}>"'
+        return f'<Airline(name"{self.name}", IATA carrier code="{self.iata_code}">'
 
 class Event(Base):
     """An individual event belonging to one airline"""

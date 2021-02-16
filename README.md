@@ -2,13 +2,13 @@
 
 Query output from `dal-history-db.py`:
 
-```
-<Airline(name"American Airlines", IATA carrier code="AA>"
-<Airline(name"Alaska Airlines", IATA carrier code="AS>"
-<Airline(name"Delta Air Lines", IATA carrier code="DL>"
-<Airline(name"Spirit Airlines", IATA carrier code="NK>"
-<Airline(name"United Airlines", IATA carrier code="UA>"
-<Airline(name"Southwest Airlines", IATA carrier code="WN>"
+``` bash
+<Airline(name"American Airlines", IATA carrier code="AA">
+<Airline(name"Alaska Airlines", IATA carrier code="AS">
+<Airline(name"Delta Air Lines", IATA carrier code="DL">
+<Airline(name"Spirit Airlines", IATA carrier code="NK">
+<Airline(name"United Airlines", IATA carrier code="UA">
+<Airline(name"Southwest Airlines", IATA carrier code="WN">
 2021-02-15 15:49:39,433 INFO sqlalchemy.engine.base.Engine SELECT airline_history.events.id AS airline_history_events_id, airline_history.events.airline_id AS airline_history_events_airline_id, airline_history.events.year AS airline_history_events_year, airline_history.events.description AS airline_history_events_description
 FROM airline_history.events ORDER BY airline_history.events.year
  LIMIT %(param_1)s
@@ -22,13 +22,13 @@ FROM airline_history.events ORDER BY airline_history.events.year
 
 Sample SQL query:
 
-```
+``` mysql
 mysql> SELECT airlines.iata_code, events.year, events.description FROM events INNER JOIN airlines WHERE airlines.id=events.airline_id AND events.year > 1930 AND events.year < 1945;
 ```
 
 Output:
 
-```
+``` mysql
 +-----------+------+----------------------------------------------------------------------------------------------------------------------------------+
 | iata_code | year | description                                                                                                                      |
 +-----------+------+----------------------------------------------------------------------------------------------------------------------------------+
