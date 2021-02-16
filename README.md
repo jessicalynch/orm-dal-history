@@ -3,16 +3,14 @@
 Query output from `dal-history-db.py`:
 
 ``` bash
-<Airline(name"American Airlines", IATA carrier code="AA">
-<Airline(name"Alaska Airlines", IATA carrier code="AS">
-<Airline(name"Delta Air Lines", IATA carrier code="DL">
-<Airline(name"Spirit Airlines", IATA carrier code="NK">
-<Airline(name"United Airlines", IATA carrier code="UA">
-<Airline(name"Southwest Airlines", IATA carrier code="WN">
-2021-02-15 15:49:39,433 INFO sqlalchemy.engine.base.Engine SELECT airline_history.events.id AS airline_history_events_id, airline_history.events.airline_id AS airline_history_events_airline_id, airline_history.events.year AS airline_history_events_year, airline_history.events.description AS airline_history_events_description
-FROM airline_history.events ORDER BY airline_history.events.year
- LIMIT %(param_1)s
-2021-02-15 15:49:39,434 INFO sqlalchemy.engine.base.Engine {'param_1': 5}
+...
+<Airline(name"American Airlines", id="3" IATA carrier code="AA">
+<Airline(name"Alaska Airlines", id="5" IATA carrier code="AS">
+<Airline(name"Delta Air Lines", id="1" IATA carrier code="DL">
+<Airline(name"Spirit Airlines", id="6" IATA carrier code="NK">
+<Airline(name"United Airlines", id="2" IATA carrier code="UA">
+<Airline(name"Southwest Airlines", id="4" IATA carrier code="WN">
+...
 <Event(id="1" airline id="1" year="1925", description="Huff Daland Dusters, the predecessor of Delta, is founded in Macon, Ga., before moving to Monroe, La., a few months later. This was the first commercial agricultural flying company, and Huff Daland's 18 planes become the largest privately owned fleet in the world. Crop-dusting operations range from Florida to Arkansas, and west to California and Mexico. Later Huff Daland operates the first international mail and passenger route on the west coast of South America for Pan Am subsidiary Peruvian Airways. ">
 <Event(id="2" airline id="1" year="1928", description="C.E. Woolman, the principal founder of what would become Delta Air Lines, leads movement to buy Huff Daland Dusters. Renamed Delta Air Service for the Mississippi Delta region it served, the new airline is incorporated on Dec. 3, 1928. D.Y. Smith, President; Woolman first Vice President. ">
 <Event(id="3" airline id="1" year="1929", description="Delta operates its first passenger flight from Dallas, Texas, to Jackson, Miss., with stops in Shreveport and Monroe, La. Service soon expands to Birmingham and Tuscaloosa, Ala., and Meridian, Miss.">

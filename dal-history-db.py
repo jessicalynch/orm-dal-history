@@ -26,7 +26,7 @@ class Airline(Base):
     iata_code = Column(String(length=2))
 
     def __repr__(self):
-        return f'<Airline(name"{self.name}", IATA carrier code="{self.iata_code}">'
+        return f'<Airline(name"{self.name}", id="{self.id}" IATA carrier code="{self.iata_code}">'
 
 class Event(Base):
     """An individual event belonging to one airline"""
