@@ -13,7 +13,6 @@ db_name = 'airline_history'
 # Configure SQLAlchemy engine
 engine = create_engine(f'mysql+mysqlconnector://{USERNAME}:{PASSWORD}@localhost:3306/{db_name}', echo=True)
 Base = declarative_base()
-Base.metadata.create_all(engine)
 
 # Create data models
 class Airline(Base):
@@ -42,6 +41,8 @@ class Event(Base):
 
     def __repr__(self):
         return f'<Event(id="{self.id}" airline id="{self.airline_id}" year="{self.year}", description="{self.description}">'
+
+Base.metadata.create_all(engine)
 
 # Insert sample data 
 data_to_insert = [('airlines.csv', Airline), ('events.csv', Event)]
